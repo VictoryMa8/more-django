@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Victory Ma <victoryma23@gmail.com>"]
+channels = ["conda-forge"]
+name = "more-django"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+django = ">=5.2.1,<6"
+psycopg = ">=3.2.9,<4"
+gdal = ">=3.11.0,<4"
+python-dotenv = ">=1.1.0,<2"
