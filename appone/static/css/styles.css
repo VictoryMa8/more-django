@@ -9,10 +9,16 @@ body {
 
 body,
 li {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style-type: none;
 }
 
-li {
+p {
+  margin: 10px;
+}
+
+li,
+p {
   font-size: 1.5rem;
 }
 
@@ -34,9 +40,44 @@ li {
   color: white;
   text-align: center;
   padding: 10px;
+  margin: 0 10px 0 0;
   text-decoration: none;
 }
 
 li a:hover {
   background-color: #111;
+}
+
+#booklist li {
+  padding: 10px;
+}
+
+#booklist li a {
+  text-decoration: underline;
+  padding: 10px;
+  color: #ffffff;
+}
+
+#booklist li a:hover {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+#book-summary {
+  margin: 0 100px 0 100px;
+}
+
+.link {
+  text-decoration: underline;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.link:hover {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+#authorlist li {
+  padding: 5px;
 }

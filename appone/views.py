@@ -31,8 +31,21 @@ def index(request):
 class BookList(generic.ListView):
     model = Book
     template_name = 'book_list.html'
+    paginate_by = 10
+    # With paginate_by, when we have >10 records, the view will start paginating the data it sends to the template
+    # The different pages are accessed using GET parameters — to access page 2 we use the URL /appone/books/?page=2
 
 class BookDetail(generic.DetailView):
     model = Book
     template_name = 'book_detail.html'
     context_object_name = 'book'
+
+class AuthorList(generic.ListView):
+    model = Author
+    template_name = 'author_list.html'
+    paginate_by = 10
+
+class AuthorDetail(generic.DetailView):
+    model = Author
+    template_name = 'author_detail.html'
+    context_object_name = 'author'

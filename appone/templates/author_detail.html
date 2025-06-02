@@ -1,0 +1,24 @@
+{% extends "basic.html" %} {% block content %}
+<h1>
+  <strong>Author:</strong>
+  {{ author.first_name }} {{ author.last_name }}
+</h1>
+
+<div style="margin-left: 20px; margin-top: 20px">
+  <h2>Books</h2>
+
+  {% if author.book_set.all %} {% for book in author.book_set.all %}
+  <hr />
+
+  <a style="font-size: 1.5rem" class="link" href="{{ book.get_absolute_url }}"
+    >{{ book.title }}</a
+  >
+  <p><strong>Summary:</strong> {{ book.summary }}</p>
+  <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+  <p><strong>Genres:</strong> {{ book.genre.all|join:" " }}</p>
+
+  {% endfor %} {% else %}
+  <p>This author has no books in the library.</p>
+  {% endif %}
+</div>
+{% endblock %}
