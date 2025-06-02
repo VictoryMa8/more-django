@@ -70,6 +70,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/proj-9.6.0-h1318a7e_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/psycopg-3.2.9-pyhd5ab78c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/psycopg-c-3.2.9-py313h2a8749c_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/psycopg2-2.9.10-py313h3186b5d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.13.3-h81fe080_101_cp313.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/python-dotenv-1.1.0-pyh29332c3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/python_abi-3.13-7_cp313.conda
@@ -853,6 +854,20 @@ packages:
   license_family: LGPL
   size: 322007
   timestamp: 1747239162434
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/psycopg2-2.9.10-py313h3186b5d_0.conda
+  sha256: bcfcd5087a50639e1cb89c330f387d755f250fd4f5618400e59cee097af9ea12
+  md5: c3607c0bc055beae263a9eebd70d5b1e
+  depends:
+  - __osx >=11.0
+  - libpq >=17.5,<18.0a0
+  - openssl >=3.5.0,<4.0a0
+  - python >=3.13,<3.14.0a0
+  - python >=3.13,<3.14.0a0 *_cp313
+  - python_abi 3.13.* *_cp313
+  license: LGPL-3.0-or-later
+  license_family: LGPL
+  size: 169872
+  timestamp: 1747320464995
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.13.3-h81fe080_101_cp313.conda
   build_number: 101
   sha256: f96468ab1e6f27bda92157bfc7f272d1fbf2ba2f85697bdc5bb106bccba1befb

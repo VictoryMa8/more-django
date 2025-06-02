@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+    <title>App One</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <h1>Library Home</h1>
+    <p>
+      Welcome to the digital library, developed by
+      <em>Victory</em>
+    </p>
+    <h2>Dynamic Content</h2>
+    <p>The digital library has the following record counts:</p>
+    <ul>
+      <li><strong>Unique Books:</strong> {{ num_books }}</li>
+      <li><strong>Copies:</strong> {{ num_instances }}</li>
+      <li><strong>Copies Available:</strong> {{ num_instances_available }}</li>
+      <li><strong>Authors:</strong> {{ num_authors }}</li>
+    </ul>
+  </body>
+</html>

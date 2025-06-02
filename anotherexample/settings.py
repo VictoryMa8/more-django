@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import psycopg2
 from dotenv import load_dotenv
 import os
 
@@ -77,14 +78,18 @@ WSGI_APPLICATION = 'anotherexample.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+HOST = os.getenv("DB_HOST")
+USER = os.getenv("DB_USER")
+PASSWORD = os.getenv('DB_PASS')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': "db.cyessnnjusuerxcnsauq.supabase.co",
+        'HOST': HOST,
         "PORT": "5432",
         'NAME': "postgres",
-        "USER": "postgres",
-        "PASSWORD": os.getenv('DB_PASS')
+        "USER": USER,
+        "PASSWORD": PASSWORD
     }
 }
 
@@ -124,6 +129,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "appone" / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
