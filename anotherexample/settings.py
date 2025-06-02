@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'appone.apps.ApponeConfig'
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -71,6 +73,9 @@ TEMPLATES = [
         },
     },
 ]
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'anotherexample.wsgi.application'
 

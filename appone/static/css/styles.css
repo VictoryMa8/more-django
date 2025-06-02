@@ -81,3 +81,24 @@ li a:hover {
 #authorlist li {
   padding: 5px;
 }
+
+#username {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 10 10px 0 0;
+}
+
+#logout-button {
+  background-color: #ffffff;
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+#logout-button:hover {
+  background-color: #333;
+  color: #ffffff;
+  cursor: pointer;
+}
