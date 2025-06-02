@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   background-color: #0077b6;
   color: #ffffff;
+  margin: 0;
 }
 
 body,
@@ -12,5 +13,30 @@ li {
 }
 
 li {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+#nav li {
+  float: left;
+}
+
+#nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
 }
