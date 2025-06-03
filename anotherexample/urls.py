@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='appone/')), # redirect our root URL of our project to our app URL
+    path('', RedirectView.as_view(url='appone/', permanent=True)), # redirect our root URL of our project to our app URL
     path('admin/', admin.site.urls),
     path('appone/', include('appone.urls')), # our app, named appone
 ]

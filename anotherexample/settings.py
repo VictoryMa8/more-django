@@ -75,7 +75,9 @@ TEMPLATES = [
 ]
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/appone/accounts/login/'
+LOGIN_REDIRECT_URL = '/appone/'
+LOGOUT_REDIRECT_URL = '/appone/accounts/login/'
 
 WSGI_APPLICATION = 'anotherexample.wsgi.application'
 

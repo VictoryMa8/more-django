@@ -1,16 +1,18 @@
 {% extends 'basic.html' %} {% block title %}
 <title>Home</title>
 {% endblock %} {% block content %}
-<h1>Digital Library Home</h1>
-<p>
-  Welcome to the digital library, developed by
-  <em>Victory</em>
-</p>
-<p>The digital library has the following record counts:</p>
+<h1 style="margin-bottom: 0">Digital Library Home</h1>
+<p>Welcome to the digital library.</p>
+<p>The digital library currently consists of:</p>
 <ul>
-  <li><strong>Authors:</strong> {{ num_authors }}</li>
-  <li><strong>Unique Books:</strong> {{ num_books }}</li>
-  <li><strong>Copies Total:</strong> {{ num_instances }}</li>
-  <li><strong>Copies Available:</strong> {{ num_instances_available }}</li>
+  <li><strong>{{ num_authors }}</strong> Unique Authors</li>
+  <li><strong>{{ num_books }}</strong> Unique Books</li>
+  <li><strong>{{ num_instances }}</strong> Copies Total</li>
+  <li><strong>{{ num_instances_available }}</strong> Copies Available</li>
 </ul>
+{% load static %}
+<img
+  style="width: 400px; height: 400px; border-radius: 20px"
+  src="{% static 'books.jpg' %}"
+/>
 {% endblock %}

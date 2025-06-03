@@ -21,11 +21,11 @@
       <td>{{ form.password }}</td>
     </tr>
   </table>
-  <input type="submit" value="login" />
+  <input type="submit" value="Login" />
   <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
 {# Assumes you set up the password_reset view in your URLConf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+<p><a class="link" href="{% url 'password_reset' %}">Forgot Password</a></p>
 
 {% endblock %}

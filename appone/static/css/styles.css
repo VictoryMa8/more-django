@@ -2,19 +2,20 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #0077b6;
+  background-color: #175958;
   color: #ffffff;
   margin: 0;
+  font-family: 'IBM Plex Mono', Verdana, sans-serif;
 }
 
-body,
 li {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   list-style-type: none;
+  font-family: 'IBM Plex Mono', Verdana, sans-serif;
 }
 
 p {
   margin: 10px;
+  font-size: 1.5rem;
 }
 
 li,
@@ -22,17 +23,17 @@ p {
   font-size: 1.5rem;
 }
 
+/* Nav bar */
 #nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #0c3131;
   width: 100%;
-}
-
-#nav li {
-  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #nav li a {
@@ -44,10 +45,11 @@ p {
   text-decoration: none;
 }
 
-li a:hover {
+#nav li a:hover {
   background-color: #111;
 }
 
+/* Book list */
 #booklist li {
   padding: 10px;
 }
@@ -63,10 +65,11 @@ li a:hover {
   border-radius: 10px;
 }
 
-#book-summary {
-  margin: 0 100px 0 100px;
+#authorlist li {
+  padding: 10px;
 }
 
+/* Links */
 .link {
   text-decoration: underline;
   padding: 10px;
@@ -78,16 +81,17 @@ li a:hover {
   border-radius: 10px;
 }
 
-#authorlist li {
-  padding: 5px;
+#book-summary {
+  margin: 0 100px;
 }
 
+/* User authentication */
 #username {
   display: block;
   color: white;
   text-align: center;
   padding: 10px;
-  margin: 10 10px 0 0;
+  margin: 0 10px 0 0;
 }
 
 #logout-button {
@@ -95,6 +99,8 @@ li a:hover {
   width: 100px;
   height: 30px;
   margin-top: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 #logout-button:hover {
